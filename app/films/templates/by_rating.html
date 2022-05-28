@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+    <h2>Результат по рейтингу {{ rating }}</h2>
+    {% if length %}
+        {% for film in films %}
+            <p>Название: {{ film.title }}</p>
+            <p>Рейтинг: {{ film.rating }}</p>
+            <p>Краткое содержание: {{ film.description }}</p>
+            <p>---------------------------------------------</p>
+        {% endfor %}
+    {% else %}
+        <p>К сожалению, таких фильмов в коллекции нет</p>
+    {% endif %}
+</body>
+</html>
